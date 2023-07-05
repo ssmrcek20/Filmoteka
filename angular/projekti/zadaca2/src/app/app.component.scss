@@ -1,0 +1,54 @@
+@import "../styles";
+
+
+
+footer {
+    margin: 0;
+    background-color: $siva;
+    padding: 2rem;
+    color: $bijela;
+    margin-top: auto;
+}
+
+nav{
+    margin: 0;
+
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: $siva;
+
+        :first-child{
+            margin-left: 1rem;
+        }
+
+        li {
+            float: left;
+            margin: 0;
+
+            a{
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 1.5rem;
+                text-decoration: none;
+                margin: 0;
+                
+                &:hover:not(.aktivan) {
+                    background-color: $siva-svijetla;
+                }
+            }
+
+            .aktivan{
+                background-color: $pastel-tamna-tamna;
+            }
+            
+        }
+        .desno{
+            float: right;
+        }
+    }
+}
+

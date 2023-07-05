@@ -1,0 +1,80 @@
+$siva-svijetla: #464646;
+$siva: #323232;
+$pastel-tamna: #d0bfb5;
+$pastel: #ddd0c8;
+$pastel-tamna-tamna: #a47358;
+$bijela: white;
+$crna: black;
+$sijena: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+
+
+body {
+  margin: 0;
+  background-color: $pastel;
+
+  app-root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    * {
+      margin: 0.5rem;
+    }
+  }
+}
+
+%gumb {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1.8rem;
+  padding-right: 1.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: $siva;
+  color: white;
+  box-shadow: $sijena;
+}
+
+button {
+  @extend %gumb;
+}
+
+
+button:hover {
+  background-color: $siva-svijetla;
+}
+
+
+  .tekst-centar {
+    text-align: center;
+}
+
+form{
+  display: grid;
+  grid-template-columns: 15rem 30rem;
+  margin: auto !important;
+  width: fit-content;
+
+  > label, input{
+    height: 2rem;
+  }
+
+  label{
+    padding-left: 1rem;
+  }
+
+  input[type="submit"]{
+    @extend %gumb;
+    height: 2.4rem;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  input[type=submit]:hover {
+    background-color: $siva-svijetla;
+  }
+
+}

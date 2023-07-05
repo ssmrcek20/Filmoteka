@@ -1,0 +1,9 @@
+<h3>Popis žanrova:</h3>
+<ol>
+    <li *ngFor="let z of zanrovi">
+        {{z.naziv}}
+        <ul>
+            <li *ngFor="let f of z.filmovi">{{f.naziv}}</li>
+        </ul>
+    </li>
+</ol>

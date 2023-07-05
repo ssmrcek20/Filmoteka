@@ -1,0 +1,21 @@
+@import "../../styles";
+
+ol{
+    li{
+        background-color: $pastel-tamna;
+        list-style-position: inside;
+        margin: 1rem;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        box-shadow: $sijena;
+        width: 50%;
+        font-weight: 800;
+    }
+}
+
+ul{
+    li{
+        box-shadow: none;
+        font-weight: 500;
+    }
+}

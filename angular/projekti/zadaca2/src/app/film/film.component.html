@@ -1,0 +1,30 @@
+<div *ngIf="uspjeh">{{ uspjeh }}</div>
+<div *ngIf="greska">{{ greska }}</div>
+
+<h2>{{ film.naziv }}</h2>
+
+<span><img height="600" src="https://image.tmdb.org/t/p/original/{{film.poster}}" alt={{film.naziv}}></span>
+<span><img height="600" src="https://image.tmdb.org/t/p/original/{{film.pozadinska_slika}}" alt={{film.naziv}}></span>
+
+<p>Orginalni naziv: {{film.orginalni_naziv}}</p>
+<p>Orginalni jezik: {{ film.orginalni_jezik }}</p>
+<p>Datum izdanja: {{ film.datum_izdanja}}</p>
+<p>Trajanje: {{ film.trajanje }} min</p>
+<p>Ocjena: {{ film['prosječna_ocjena'] }}</p>
+<p>Broj ocjena: {{film.broj_ocjena}}</p>
+<p>Popularnost: {{ film.popularnost }}</p>
+<p>Status: {{ film.status }}</p>
+
+<p>Datum unosa: {{film.datum_unosa}}</p>
+<p>Dodao ga je: {{KorisnikIme}}</p>
+
+<p>Opis: {{ film.opis }}</p>
+<p>Slogan: {{ film.slogan }}</p>
+<p>Budžet: {{ film['budžet'] | currency }}</p>
+<p>Prihod: {{ film.prihod | currency }}</p>
+<p *ngIf="film.za_odrasle === 0">Za odrasle: Ne</p>
+<p *ngIf="film.za_odrasle === 1">Za odrasle: Da</p>
+
+<p><a href="{{ film['početna_stranica']}}">Početna stranica</a></p>
+<p><a href="https://www.imdb.com/title/{{ film.imdb_id }}">IMDB</a></p>
+<p><a href="#">Galerija slika</a></p>

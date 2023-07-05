@@ -1,0 +1,18 @@
+<div *ngIf="uspjeh">{{uspjeh}}</div>
+<div *ngIf="greska">{{greska}}</div>
+
+<form (ngSubmit)="registracija()">
+    <label for="ime">Ime</label>
+    <input [(ngModel)]="ime" name="ime" />
+    <label for="prezime">Prezime</label>
+    <input [(ngModel)]="prezime" type="text" name="prezime"  />
+    <label for="korime">Korisničko ime*</label>
+    <input [(ngModel)]="korime" type="text" name="korime"  />
+    <label for="lozinka">Lozinka*</label>
+    <input [(ngModel)]="lozinka" type="password" name="lozinka"  />
+    <label for="email">E-mail</label>
+    <input [(ngModel)]="email" type="email" name="email" />
+    <br>
+    <input type="submit" value="Registriraj" />
+</form>
+

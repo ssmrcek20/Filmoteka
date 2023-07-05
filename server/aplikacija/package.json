@@ -1,0 +1,12 @@
+{
+  "name": "aplikacija",
+  "version": "1.0.0",
+  "description": "Web aplikacija",
+  "main": "appServer.js",
+  "scripts": {
+    "start": "NODE_PATH=/usr/lib/node_modules/ node --experimental-fetch appServer.js ../rwa_ssmrcek20_conf.csv",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stanko Smrček",
+  "license": "ISC"
+}

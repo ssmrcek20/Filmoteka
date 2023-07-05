@@ -1,0 +1,26 @@
+<header>
+<h1>{{title}}</h1>
+</header>
+<nav>
+    <ul>
+        <li><a [class.aktivan] = "putanja === ''" routerLink="" (click)="putanja=''">Početna</a></li>
+        <li><a [class.aktivan] = "putanja === 'dokumentacija'" routerLink="/dokumentacija" (click)="putanja='dokumentacija'">Dokumentacija</a></li>
+        <li><a [class.aktivan] = "putanja === 'profil'" routerLink="/profil" (click)="putanja='profil'">Profil</a></li>
+        <li><a [class.aktivan] = "putanja === 'filmovi-pretrazivanje'" routerLink="/filmovi-pretrazivanje" (click)="putanja='filmovi-pretrazivanje'">Filmovi pretrazivanje</a></li>
+        <li><a [class.aktivan] = "putanja === 'filmovi-pregled'" routerLink="/filmovi-pregled" (click)="putanja='filmovi-pregled'">Filmovi pregled</a></li>
+
+        <li class="desno" ><a [class.aktivan] = "putanja === 'prijava'" routerLink="/prijava" (click)="putanja='prijava'">Prijava</a></li>
+        <li class="desno" ><a [class.aktivan] = "putanja === 'odjava'" routerLink="/odjava" (click)="putanja='odjava'">Odjava</a></li>
+        <li class="desno" ><a [class.aktivan] = "putanja === 'registracija'" routerLink="/registracija" (click)="putanja='registracija'">Registracija</a></li>
+
+    </ul>
+    
+    
+</nav>
+<main>
+    <router-outlet></router-outlet>
+</main>
+<footer>
+    <p class="tekst-centar">2023 &copy; Stanko Smrček</p>
+</footer>
+    

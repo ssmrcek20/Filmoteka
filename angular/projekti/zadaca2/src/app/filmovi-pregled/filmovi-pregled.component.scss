@@ -1,0 +1,27 @@
+@import "../../styles";
+
+.filter{
+    height: 2.4rem;
+    width: 10rem;
+}
+
+input[type="radio"]{
+    cursor: pointer;
+}
+
+ul{
+    button{
+        color:$crna;
+        background-color: $pastel-tamna;
+        list-style-position: inside;
+        margin: 1rem;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        box-shadow: $sijena;
+        width: 50%;
+        font-weight: 500;
+        height: 2.4rem;
+        text-align: left;
+        padding-left: 2rem;
+    }
+}

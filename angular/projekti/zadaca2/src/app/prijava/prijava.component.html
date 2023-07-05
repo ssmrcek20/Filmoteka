@@ -1,0 +1,13 @@
+<div *ngIf="uspjeh">{{uspjeh}}</div>
+<div *ngIf="greska">{{greska}}</div>
+
+<form (ngSubmit)="prijava()">
+  <label for="korime">Korisničko ime</label>
+  <input [(ngModel)]="korime" name="korime" type="text" />
+  <label for="lozinka">Lozinka</label>
+  <input [(ngModel)]="lozinka" name="lozinka" type="password" /><br>
+  <input type="submit" value="Prijavi se" />
+</form>
+
+<div>korisnik 1: obican  rwa</div>
+<div>korisnik 2: administrator  rwa</div>

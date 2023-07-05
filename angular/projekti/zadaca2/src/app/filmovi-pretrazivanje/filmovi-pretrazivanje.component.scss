@@ -1,0 +1,42 @@
+@import "../../styles";
+
+label, input {
+  height: 1.5rem;
+}
+
+table {
+    border-collapse: collapse;
+    border-radius: 0.5rem;
+    box-shadow: $sijena;
+  
+    .prvi{
+      :first-child{
+          border-top-left-radius: 0.5rem;
+      }
+      :last-child{
+          border-top-right-radius: 0.5rem;
+      }
+    }
+  
+    th,
+    td {
+      text-align: left;
+      padding: 1rem;
+
+      img{
+        margin: 0;
+      }
+      button{
+        margin: 0;
+      }
+    }
+  
+    tr:nth-child(odd) {
+      background-color: $pastel-tamna;
+    }
+  
+    th {
+      background-color: $pastel-tamna-tamna;
+      color: $bijela;
+    }
+  }

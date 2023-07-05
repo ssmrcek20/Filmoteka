@@ -1,0 +1,62 @@
+<div *ngIf="uspjeh">{{ uspjeh }}</div>
+<div *ngIf="greska">{{ greska }}</div>
+<br>
+<label for="rijeci">Filter</label>
+<input
+  [(ngModel)]="rijeci"
+  name="rijeci"
+  type="text"
+  placeholder="Ključne riječi" (keyup)="dajFilmove(1)"
+/><br />
+<div class="tekst-centar">
+<span *ngIf="tmdb.page > 1">
+    <button (click)="dajFilmove(1)" ><<</button>
+    <button (click)="dajFilmove(tmdb.page-1)" ><</button>
+</span>
+<button (click)="dajFilmove(tmdb.page)">{{tmdb.page}}</button>
+<span *ngIf="tmdb.page < tmdb.total_pages">
+    <button (click)="dajFilmove(tmdb.page+1)" >></button>
+    <button (click)="dajFilmove(tmdb.total_pages)" >>></button>
+</span>
+</div>
+<table>
+  <tr class="prvi">
+    <th>Id</th>
+    <th>Jezik</th>
+    <th>Naslov original</th>
+    <th>Naslov</th>
+    <th>Opis</th>
+    <th>Poster</th>
+    <th>Datum</th>
+    <th>Gumb</th>
+  </tr>
+  <tr *ngFor="let f of tmdb.results">
+    <td>{{ f.id }}</td>
+    <td>{{ f.original_language }}</td>
+    <td>{{ f.title }}</td>
+    <td>{{ f.original_title }}</td>
+    <td>{{ f.overview }}</td>
+    <td>
+      <img
+        src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{
+          f.poster_path
+        }}"
+        width="100"
+        alt="slika {{ f.title }}"
+      />
+    </td>
+    <td>{{ f.release_date }}</td>
+    <td><button (click)="dodajUBazu(f)" >Dodaj u bazu</button></td>
+  </tr>
+</table>
+<div class="tekst-centar">
+  <span *ngIf="tmdb.page > 1">
+      <button (click)="dajFilmove(1)" ><<</button>
+      <button (click)="dajFilmove(tmdb.page-1)" ><</button>
+  </span>
+  <button (click)="dajFilmove(tmdb.page)">{{tmdb.page}}</button>
+  <span *ngIf="tmdb.page < tmdb.total_pages">
+      <button (click)="dajFilmove(tmdb.page+1)" >></button>
+      <button (click)="dajFilmove(tmdb.total_pages)" >>></button>
+  </span>
+  </div>

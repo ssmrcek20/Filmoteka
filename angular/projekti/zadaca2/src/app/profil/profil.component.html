@@ -1,0 +1,14 @@
+<div *ngIf="uspjeh">{{uspjeh}}</div>
+<div *ngIf="greska">{{greska}}</div>
+
+<form (ngSubmit)="azuriranje()">
+    <label for="korime">Korisničko ime</label>
+    <input [(ngModel)]="korime" name="korime" type="text" disabled />
+    <label for="email">E-mail</label>
+    <input [(ngModel)]="email" name="email" type="email" disabled />
+    <label for="ime">Ime</label>
+    <input [(ngModel)]="ime" name="ime" type="text" />
+    <label for="prezime">Prezime</label>
+    <input [(ngModel)]="prezime" name="prezime" type="text" /><br>
+    <input type="submit" value="Promjeni" />
+</form>

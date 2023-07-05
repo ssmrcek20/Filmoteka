@@ -1,0 +1,36 @@
+<div *ngIf="uspjeh">{{ uspjeh }}</div>
+<div *ngIf="greska">{{ greska }}</div>
+
+<br />
+<p>Sortiranje:</p>
+<input type="radio" id="n" name="sort" value="n" [(ngModel)]="sort" />
+<label for="n">Naziv</label><br />
+<input type="radio" id="d" name="sort" value="d" [(ngModel)]="sort" />
+<label for="d">Datum</label><br />
+<input type="radio" id="z" name="sort" value="z" [(ngModel)]="sort" />
+<label for="z">Žanr</label><br />
+<p>Filtriranje:</p>
+<label for="zanr">Zanr</label>
+<input type="text" name="zanr" [(ngModel)]="zanr" placeholder="npr: Action" /><br />
+<label for="datum">Datum unosa</label>
+<input type="text" name="datum" [(ngModel)]="datum" placeholder="npr: 01.01.2023. 19:07:34" /><br /><br />
+<button class="filter" (click)="dajFilmove(1)" type="button">Filtriraj</button><br />
+
+<h3>Popis filmova:</h3>
+<ul *ngFor="let film of filmovi">
+        <button (click)="prikaziFilm(film)">
+            {{film.naziv}}
+        </button>
+</ul>
+
+<div>
+    <span *ngIf="stranica > 1">
+        <button (click)="dajFilmove(1)" ><<</button>
+        <button (click)="dajFilmove(stranica-1)" ><</button>
+    </span>
+    <button (click)="dajFilmove(stranica)">{{stranica}}</button>
+    <span *ngIf="stranica < brojStranica">
+        <button (click)="dajFilmove(stranica+1)" >></button>
+        <button (click)="dajFilmove(brojStranica)" >>></button>
+    </span>
+    </div>
